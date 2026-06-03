@@ -1,0 +1,21 @@
+name: Generate ASCII Art Network
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ascii-art:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Execute shell script
+      - name: Execute Shell Script File
+        run: |
+          chmod +x ./.github/workflows/ascii-script.sh
+          ./.github/workflows/ascii-script.sh
